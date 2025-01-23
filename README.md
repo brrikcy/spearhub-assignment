@@ -6,15 +6,15 @@ This repository contains a Flask application (`API.ipynb`) that serves as a web 
 
 - `API.ipynb`: The Jupyter Notebook file containing the main Flask application code. It defines the API endpoints for data upload, model training, prediction, and error handling.
 - `README.md` (current file): Provides an overview of the project, including API functionality, testing instructions, and dataset details.
-- `screenshots` (optional): This folder can contain screenshots showcasing the API tested using Postman (these are not mandatory but recommended for better illustration).
-- `machine_downtime.csv` (optional): The CSV dataset used for training and testing the machine downtime prediction models (if part of the repository).
+- `screenshots` : Contain screenshots showcasing the API tested using Postman.
+- `machine_downtime.csv` : The CSV dataset used for training and testing the machine downtime prediction models.
 
 ## API Endpoints
 
 ### **/upload (POST)**
 
 - Uploads a CSV file containing manufacturing data.
-- **Expected format**: CSV with columns including `Machine_ID`, `Downtime_Flag` (target variable), and other relevant features.
+- **Expected format**: CSV with columns including `Machine_ID`,`Temperature`,`Runtime`, `Downtime_Flag` (target variable), and other relevant features.
 - **Response**:
   - Success: JSON with message "Data uploaded successfully!" and number of rows uploaded.
   - Error: JSON with error message (e.g., file not found, invalid file format).
@@ -40,7 +40,7 @@ This repository contains a Flask application (`API.ipynb`) that serves as a web 
 
 ## Running the Application
 
-1. Ensure you have Python and the required libraries installed (refer to the environment requirements in the Jupyter Notebook).
+1. Ensure you have Python and the required libraries installed.
 2. Open the `API.ipynb` file in a Jupyter Notebook environment.
 3. Run the code cells in the notebook. The API will typically start running on `http://127.0.0.1:5000/` (default Flask development server) by default.
 
